@@ -19,14 +19,7 @@ The winad module manages Windows Active Directory tasks to create Organizanation
 
 ## Description
 
-Start with a one- or two-sentence summary of what the module does and/or what
-problem it solves. This is your 30-second elevator pitch for your module.
-Consider including OS/Puppet version it works with.
-
-You can give more descriptive information in a second paragraph. This paragraph
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?" If your module has a range of functionality (installation, configuration,
-management, etc.), this is the time to mention it.
+Puppet Module manages Windows Active Directory components such as Organizanation Unit, Groups and Users.
 
 ## Setup
 
@@ -48,11 +41,14 @@ puppet module install shoneslabs-winad
 
 The winad module allows you to manage windows system using the Puppet DSL. To create an organizational unit (OU), use the `winad_ou` type. The following code sets up a very basic organizantional unit.
 ```puppet
-winad_ou { '/test.html':
-  ensure   => present,
-  url      => 'http://www.example.com',
-  checksum => '09b9c392dc1f6e914cea287cb6be34b0',
-}
+winad_ou { 'TestOU':
+    ensure      => present,
+    path        => 'DC=shoneslabs,DC=win,DC=com',
+    city        => 'Atlanta',
+    state       => 'GA',
+    postalcode  => '30338',
+    country     => 'IN',
+} 
 ```
 
 
