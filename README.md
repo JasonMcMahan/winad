@@ -1,5 +1,7 @@
 # winad
 
+[![Build Status](https://travis-ci.org/shoneslab/winad.svg?branch=master)](https://travis-ci.org/shoneslab/winad)
+
 #### Table of Contents
 
 1. [Overview](#overview)
@@ -11,6 +13,7 @@
 1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 1. [Limitations - OS compatibility, etc.](#limitations)
 1. [Development - Guide for contributing to the module](#development)
+
 
 
 ## Overview

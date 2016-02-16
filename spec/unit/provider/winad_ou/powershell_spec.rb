@@ -11,8 +11,8 @@ describe Puppet::Type.type(:winad_ou).provider(:powershell) do
     :path         => 'DC=shoneslabs,DC=win,DC=com',
     :city         => 'Atlanta',
     :state        => 'GA',
-    :postalcode   => '30338',
-    :country      => 'IN',
+    :postalcode   => '30329',
+    :country      => 'US',
   )}
   let(:provider) { resource.provider }
 
