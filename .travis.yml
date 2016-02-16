@@ -1,4 +1,8 @@
 language: ruby
+cache: bundler
+bundler_args: --without system_tests
+script:
+  - "bundle exec rspec spec/unit -fd -b"
 env:
   - PUPPET_VERSION=4.3.0
   - PUPPET_VERSION=4.2.0
@@ -8,7 +12,6 @@ rvm:
   - 2.2.3
   - 2.2.0
   - 2.0.0
-script:
-  - "rake spec"
+
 notifications:
   email: false
