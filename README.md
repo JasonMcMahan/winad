@@ -50,8 +50,8 @@ winad_ou { 'TestOU':
     path        => 'DC=shoneslabs,DC=win,DC=com',
     city        => 'Atlanta',
     state       => 'GA',
-    postalcode  => '30338',
-    country     => 'IN',
+    postalcode  => '30329',
+    country     => 'US',
 } 
 ```
 
@@ -64,8 +64,8 @@ winad_ou { 'TestOU':
     path        => 'DC=shoneslabs,DC=win,DC=com',
     city        => 'Atlanta',
     state       => 'GA',
-    postalcode  => '30338',
-    country     => 'IN',
+    postalcode  => '30329',
+    country     => 'US',
 } 
 ```
 
@@ -183,7 +183,9 @@ TODO - Incorporate more attributes to the types
 TODO - Update Features
 
 TODO - Need to test on versions other than Win2012R2
+
 TODO - Acceptance Testing Scripts
+
 TODO - Documentation
 
 
