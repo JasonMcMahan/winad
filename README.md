@@ -1,6 +1,7 @@
 # winad
 
 [![Build Status](https://travis-ci.org/shoneslab/winad.svg?branch=master)](https://travis-ci.org/shoneslab/winad)
+![Windows Build Status](https://ci.appveyor.com/api/projects/status/fhjf2omybd5o14a6?svg=true)
 
 #### Table of Contents
 
