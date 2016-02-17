@@ -1,7 +1,7 @@
 {
-  "name": "shoneslabs-winad",
-  "version": "0.1.0",
-  "author": "shoneslabs",
+  "name": "shoneslab-winad",
+  "version": "0.1.1",
+  "author": "shoneslab",
   "summary": "Puppet Module to install Windows Active Directory components like organizantional unit, group, users etc.",
   "license": "Apache-2.0",
   "source": "https://github.com/shoneslab/winad",
@@ -9,10 +9,6 @@
   "issues_url": "https://github.com/shoneslab/winad/issues",
   "description": "Manage Windows AD Forest, Organizantion Units, Groups, Users",
   "dependencies": [
-    {
-        "name":"puppetlabs-stdlib",
-        "version_requirement": ">= 1.0.0"
-    },
     {
       "name": "puppetlabs/powershell",
       "version_requirement": ">=1.0.2"

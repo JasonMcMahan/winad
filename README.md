@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/shoneslab/winad.svg?branch=master)](https://travis-ci.org/shoneslab/winad)
 ![Windows Build Status](https://ci.appveyor.com/api/projects/status/fhjf2omybd5o14a6?svg=true)
+[![Coverage Status](https://coveralls.io/repos/github/shoneslab/winad/badge.svg?branch=master)](https://coveralls.io/github/shoneslab/winad?branch=master)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/shoneslab/winad.svg)](https://forge.puppetlabs.com/shoneslab/winad)
 
 #### Table of Contents
 
@@ -38,7 +40,7 @@ puppet module install puppetlabs-powershell
 Finally, install the module with
 
 ~~~
-puppet module install shoneslabs-winad
+puppet module install shoneslab-winad
 ~~~
 
 ### Beginning with winad
@@ -47,7 +49,7 @@ The winad module allows you to manage windows system using the Puppet DSL. To cr
 ```puppet
 winad_ou { 'TestOU':
     ensure      => present,
-    path        => 'DC=shoneslabs,DC=win,DC=com',
+    path        => 'DC=shoneslab,DC=win,DC=com',
     city        => 'Atlanta',
     state       => 'GA',
     postalcode  => '30329',
@@ -61,7 +63,7 @@ winad_ou { 'TestOU':
 ```puppet
 winad_ou { 'TestOU':
     ensure      => present,
-    path        => 'DC=shoneslabs,DC=win,DC=com',
+    path        => 'DC=shoneslab,DC=win,DC=com',
     city        => 'Atlanta',
     state       => 'GA',
     postalcode  => '30329',
@@ -73,7 +75,7 @@ winad_ou { 'TestOU':
 ```puppet
 winad_group { 'PrivUserGroup1':
     ensure          => present,
-    path            => 'OU=TestOU,DC=shoneslabs,DC=win,DC=com',
+    path            => 'OU=TestOU,DC=shoneslab,DC=win,DC=com',
     group_scope     => 'DomainLocal',
     group_category  => 'Security',
 }
@@ -83,7 +85,7 @@ winad_group { 'PrivUserGroup1':
 ```puppet
 winad_user { 'PuppetUser01':
     ensure                      => absent,
-    path                        => 'CN=Users,DC=shoneslabs,DC=win,DC=com',
+    path                        => 'CN=Users,DC=shoneslab,DC=win,DC=com',
     password_never_expires      => true,
     password                    => 'V@grant@123',
     enabled                     => true,
