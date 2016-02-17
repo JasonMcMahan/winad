@@ -13,7 +13,7 @@ Puppet::Type.newtype(:winad_forest) do
       }
 
       validate do
-        fail('domain_name or name is a required attribute') if self[:domain_name].nil? && self[:name].nil?
+        fail('domain_name is a required attribute') if self[:domain_name].nil? 
         fail('password is a required attribute') if self[:password].nil?
       end
 

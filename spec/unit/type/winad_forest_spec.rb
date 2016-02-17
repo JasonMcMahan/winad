@@ -1,4 +1,3 @@
-at_exit { RSpec::Puppet::Coverage.report! }
 require 'puppetlabs_spec_helper/module_spec_helper'
 
 describe Puppet::Type.type(:winad_forest) do

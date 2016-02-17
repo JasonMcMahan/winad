@@ -1,6 +1,6 @@
 {
   "name": "shoneslab-winad",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "shoneslab",
   "summary": "Puppet Module to install Windows Active Directory components like organizantional unit, group, users etc.",
   "license": "Apache-2.0",

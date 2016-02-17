@@ -11,19 +11,27 @@
 #
 notify { "Welcome to Puppet Windows Active Directory Module": }
 
- winad_forest { 'shoneslabs':
+    winad_features { 'net_framework_core':
+        ensure      => present,
+    } ->
+    
+    winad_features { 'ad_domain_services':
+        ensure      => present,
+    } ->
+    
+    winad_forest { 'shoneslabs':
         ensure                  => present,
-        domain_name             => 'devops.shoneslabs.com',
+        domain_name             => 'devops.shoneslab.com',
         domain_netbios_name     => 'SHONESLABS',
         password                => 'V@grant@123',
-    }->
+    } ->  
     
     winad_ou { 'TestOU2':
         ensure      => present,
-        path        => 'DC=devops,DC=shoneslabs,DC=com',
+        path        => 'DC=devops,DC=shoneslab,DC=com',
         city        => 'Atlanta',
         state       => 'GA',
-        postalcode  => '30338',
+        postalcode  => '30329',
         country     => 'US',
     } 
 
