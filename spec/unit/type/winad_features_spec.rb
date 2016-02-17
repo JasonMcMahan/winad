@@ -2,12 +2,12 @@ require 'puppetlabs_spec_helper/module_spec_helper'
 
 describe Puppet::Type.type(:winad_features) do
 
-  it "should throw an error for the absence of name" do
+  it "should throw an error for the empty name" do
     expect {
       described_class.new(
-        :ensure       => present,
+          :name         => '',
       )
-    }.to raise_error(/must be provided/)
+    }.to raise_error(/Invalid value/)
   end
 
   it "should throw an error for an invalid value in name" do
@@ -15,7 +15,7 @@ describe Puppet::Type.type(:winad_features) do
       described_class.new(
         :name         => 'somethingelse',
       )
-    }.to raise_error(/is a required attribute/)
+    }.to raise_error(/Invalid value/)
   end
 
 
@@ -23,7 +23,6 @@ describe Puppet::Type.type(:winad_features) do
     expect {
       described_class.new(
         :name                   => 'net_framework_core',
-        :ensure                 => present,
       )
     }.to_not raise_error
   end
@@ -32,7 +31,6 @@ describe Puppet::Type.type(:winad_features) do
     expect {
       described_class.new(
         :name                   => 'ad_domain_services',
-        :ensure                 => present,
       )
     }.to_not raise_error
   end
