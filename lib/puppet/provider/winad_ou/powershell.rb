@@ -3,7 +3,7 @@ Puppet::Type.type(:winad_ou).provide(:powershell) do
     confine :operatingsystem => :windows
     defaultfor :operatingsystem => :windows
 
-    commands :powershell => Powershell.getPowershellCommand
+    commands :powershell => Puppet::Util::Powershell.getPowershellCommand
 
     def create
       self.class.send_log(:info, "call create()")
