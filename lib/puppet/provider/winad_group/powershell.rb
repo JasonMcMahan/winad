@@ -1,9 +1,9 @@
-require 'puppet/util/powershell'
+require 'puppet/util'
 Puppet::Type.type(:winad_group).provide(:powershell) do
     confine :operatingsystem => :windows
     defaultfor :operatingsystem => :windows
 
-    commands :powershell => Powershell.getPowershellCommand
+    commands :powershell => Puppet::Util::Powershell.getPowershellCommand
 
 
     def create
